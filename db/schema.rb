@@ -31,11 +31,28 @@ ActiveRecord::Schema.define(version: 20141118085919) do
 
   add_index "images", ["description_id_id"], name: "index_images_on_description_id_id"
 
+# ActiveRecord::Schema.define(version: 20141118100736) do
+
+
   create_table "masters", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "secondary_tbls", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "distance_starts"
+    t.integer  "distance_ends"
+    t.integer  "masters_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "secondary_tbls", ["masters_id_id"], name: "index_secondary_tbls_on_masters_id_id"
 
 end
