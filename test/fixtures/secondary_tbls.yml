@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  height: 1
+  width: 1
+  distance_starts: 1
+  distance_ends: 1
+  masters_id_id: 
+
+two:
+  name: MyString
+  description: MyText
+  height: 1
+  width: 1
+  distance_starts: 1
+  distance_ends: 1
+  masters_id_id: 
