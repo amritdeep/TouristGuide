@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
+
   resources :descriptions
 
-  get 'master_view/index'
+  get 'master_view/index' => 'master_view#index'
+  get 'master_view/new' => 'master_view#new'
+  post 'master_view/create' => 'master_view#create', as: :masters
+  get 'master_view/show/:id' => 'master_view#show', as: :master_show
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'welcome#index'
+  # root 'welcome#index'
+  root 'master_view#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
