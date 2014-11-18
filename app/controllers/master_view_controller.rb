@@ -20,5 +20,6 @@ class MasterViewController < ApplicationController
   end
 
   def show
+  	@master = Master.find(params[:id])
   end
 end
