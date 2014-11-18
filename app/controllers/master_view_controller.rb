@@ -5,4 +5,8 @@ class MasterViewController < ApplicationController
 
   def new
   end
+
+  def create
+  	@master = Master.create(name: params[:master][:name], description: params[:master][:description])
+  end
 end
