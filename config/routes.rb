@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+  resources :images
+>>>>>>> Description
 
   resources :descriptions
 
