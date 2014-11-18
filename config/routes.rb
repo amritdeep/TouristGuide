@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'master_view/index'
-  get 'master_view/new'
-  post 'master_view/create', as: :masters
+  get 'master_view/index' => 'master_view#index'
+  get 'master_view/new' => 'master_view#new'
+  post 'master_view/create' => 'master_view#create', as: :masters
+  get 'master_view/show/:id' => 'master_view#show', as: :master_show
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
