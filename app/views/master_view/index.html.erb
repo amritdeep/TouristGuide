@@ -6,7 +6,7 @@
 
 	<% @master.each do |m| %>
 	<tr>
-		<td><%= m.name %></td>
+		<td><%= link_to m.name, master_secondaries_path(m) %></td>
 		<td><%= m.description %></td>
 	</tr>	
 	<% end %>
