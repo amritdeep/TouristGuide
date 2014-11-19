@@ -1,0 +1,29 @@
+<h1>Listing tourist_guide_images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image name</th>
+      <th>Image createdby</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourist_guide_images.each do |tourist_guide_image| %>
+      <tr>
+        <td><%= tourist_guide_image.image_name %></td>
+        <td><%= tourist_guide_image.image_createdby %></td>
+        <td><%= tourist_guide_image.description_id %></td>
+        <td><%= link_to 'Show', tourist_guide_image %></td>
+        <td><%= link_to 'Edit', edit_tourist_guide_image_path(tourist_guide_image) %></td>
+        <td><%= link_to 'Destroy', tourist_guide_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourist guide image', new_tourist_guide_image_path %>
