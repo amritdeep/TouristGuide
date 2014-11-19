@@ -1,0 +1,29 @@
+<%= form_for(@tourist_guide_image) do |f| %>
+  <% if @tourist_guide_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tourist_guide_image.errors.count, "error") %> prohibited this tourist_guide_image from being saved:</h2>
+
+      <ul>
+      <% @tourist_guide_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_name %><br>
+    <%= f.text_field :image_name %>
+  </div>
+  <div class="field">
+    <%= f.label :image_createdby %><br>
+    <%= f.text_field :image_createdby %>
+  </div>
+  <div class="field">
+    <%= f.label :description_id_id %><br>
+    <%= f.text_field :description_id_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

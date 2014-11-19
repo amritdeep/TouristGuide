@@ -14,6 +14,7 @@ class MasterViewController < ApplicationController
   		if @master.save
   			format.html { redirect_to master_show_url(@master)}
   		else
+  			flash[:notice] = "Name and description are required"
   			format.html { render :new }
   		end
   	end
