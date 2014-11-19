@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'master_view/show/:id' => 'master_view#show', as: :master_show
 
   get 'master_view/index'
+ 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
