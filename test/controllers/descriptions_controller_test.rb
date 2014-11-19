@@ -18,7 +18,7 @@ class DescriptionsControllerTest < ActionController::TestCase
 
   test "should create description" do
     assert_difference('Description.count') do
-      post :create, description: { description: @description.description, master_id_id: @description.master_id_id }
+      post :create, description: { description: @description.description }
     end
 
     assert_redirected_to description_path(assigns(:description))
@@ -35,7 +35,7 @@ class DescriptionsControllerTest < ActionController::TestCase
   end
 
   test "should update description" do
-    patch :update, id: @description, description: { description: @description.description, master_id_id: @description.master_id_id }
+    patch :update, id: @description, description: { description: @description.description }
     assert_redirected_to description_path(assigns(:description))
   end
 

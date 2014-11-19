@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TouristGuideImageTest < ActiveSupport::TestCase
+class SecondaryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,10 +1,10 @@
-<%= form_for(@secondary_tbl) do |f| %>
-  <% if @secondary_tbl.errors.any? %>
+<%= form_for(@secondary) do |f| %>
+  <% if @secondary.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@secondary_tbl.errors.count, "error") %> prohibited this secondary_tbl from being saved:</h2>
+      <h2><%= pluralize(@secondary.errors.count, "error") %> prohibited this secondary from being saved:</h2>
 
       <ul>
-      <% @secondary_tbl.errors.full_messages.each do |message| %>
+      <% @secondary.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -28,16 +28,16 @@
     <%= f.number_field :width %>
   </div>
   <div class="field">
-    <%= f.label :distance_starts %><br>
-    <%= f.number_field :distance_starts %>
+    <%= f.label :depth %><br>
+    <%= f.number_field :depth %>
   </div>
   <div class="field">
-    <%= f.label :distance_ends %><br>
-    <%= f.number_field :distance_ends %>
+    <%= f.label :distance_from %><br>
+    <%= f.number_field :distance_from %>
   </div>
   <div class="field">
-    <%= f.label :masters_id_id %><br>
-    <%= f.text_field :masters_id_id %>
+    <%= f.label :distance_end %><br>
+    <%= f.number_field :distance_end %>
   </div>
   <div class="actions">
     <%= f.submit %>

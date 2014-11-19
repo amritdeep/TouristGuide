@@ -1,3 +1,3 @@
 class Image < ActiveRecord::Base
-  belongs_to :description_id
+	belongs_to :description
 end

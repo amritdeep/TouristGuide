@@ -5,15 +5,15 @@ one:
   description: MyText
   height: 1
   width: 1
-  distance_starts: 1
-  distance_ends: 1
-  masters_id_id: 
+  depth: 1
+  distance_from: 1
+  distance_end: 1
 
 two:
   name: MyString
   description: MyText
   height: 1
   width: 1
-  distance_starts: 1
-  distance_ends: 1
-  masters_id_id: 
+  depth: 1
+  distance_from: 1
+  distance_end: 1

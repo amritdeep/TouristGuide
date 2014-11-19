@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   resources :descriptions
 
+  resources :secondaries
+
   get 'master_view/index' => 'master_view#index'
   get 'master_view/new' => 'master_view#new'
   post 'master_view/create' => 'master_view#create', as: :masters
   get 'master_view/show/:id' => 'master_view#show', as: :master_show
-
-  resources :secondary_tbls
 
   get 'master_view/index'
 

@@ -1,4 +1,4 @@
 class Description < ActiveRecord::Base
-  belongs_to :master_id
-   
+	has_many :images
+	belongs_to :secondary
 end
