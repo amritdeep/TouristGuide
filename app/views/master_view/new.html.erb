@@ -1,12 +1,4 @@
 <h1>New Master page</h1>
-<% if flash[:notice].present? %>
-	<%= flash[:notice] %>
-<% end %>
 
-<%= form_for @master do |f| %>
-	Name:	<%= f.text_field :name %><br />
-	Description: <%= f.text_field :description %><br />
-	<%= f.submit %>
-	<br />
-	<%= link_to "Insert master Types", '/secondaries/new' %>
-<% end %>
+<%= render 'form' %>
+
