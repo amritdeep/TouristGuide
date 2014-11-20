@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
 
 
+## secondary description route
+get 'secondaries/:id/descriptions/new' => 'descriptions#secondary_new', as: :secondary_description_new
+post 'secondaries/:id/descriptions/create'=> 'descriptions#secondary_create', as: :secondary_description_create
+ 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

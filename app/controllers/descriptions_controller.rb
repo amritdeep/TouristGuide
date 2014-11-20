@@ -21,6 +21,25 @@ class DescriptionsController < ApplicationController
   def edit
   end
 
+ def secondary_new
+    @secondary = Secondary.find(params[:id])
+    @description = @secondary.descriptions.new
+end
+
+def secondary_create
+    @secondary = Secondary.find(params[:id])
+    @description = @secondary.descriptions.create(description_params)
+    respond_to do |format|
+      if @description.save
+        format.html{ redirect_to root_url, notice: "One description data is added in master data" }
+      else
+        format.html {render :secondary_new, notice: "Unable to add description data" }
+      end
+    end
+  end
+
+
+
   # POST /descriptions
   # POST /descriptions.json
   def create

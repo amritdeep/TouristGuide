@@ -30,7 +30,7 @@ class SecondariesController < ApplicationController
 
     respond_to do |format|
       if @secondary.save
-        format.html { redirect_to @secondary, notice: 'Secondary was successfully created.' }
+        format.html { redirect_to secondary_show_url(@secondary), notice: 'Secondary was successfully created.' }
         format.json { render :show, status: :created, location: @secondary }
       else
         format.html { render :new }
