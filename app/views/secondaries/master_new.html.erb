@@ -1,6 +1,5 @@
 <h1>Master secondary</h1>
 
-
 <%= form_for(@secondary, url: master_secondary_create_path) do |f| %>
   <% if @secondary.errors.any? %>
     <div id="error_explanation">
@@ -46,3 +45,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= link_to :back, root_url %>
