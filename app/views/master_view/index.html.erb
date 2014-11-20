@@ -4,6 +4,7 @@
 		<th>Description</th>
 		<th>Master table count</th>
 		<th>Delete</th>
+		<th>Edit</th>
 		<th>Add new Secondary</th>
 	</tr>
 
@@ -13,6 +14,7 @@
 		<td><%= m.description %></td>
 		<td><%= m.secondaries.count %></td>
 		<td><%= link_to "Delete", masters_delete_path(m), method: :delete, data: { confirm: 'Do you want to delete it ?' } %></td>
+		<td><%= link_to "Edit", master_edit_path(m) %></td>
 		<td><%= link_to "Add", master_secondary_new_path(m) %></td>
 	</tr>	
 	<% end %>

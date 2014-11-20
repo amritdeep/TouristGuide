@@ -24,6 +24,21 @@ class MasterViewController < ApplicationController
   	@master = Master.find(params[:id])  
   end
 
+  def edit
+    @master = Master.find(params[:id])
+  end
+
+  def update
+    @master = Master.find(params[:id])
+    respond_to do |format|
+      if @master.update(master_params)
+        format.html { redirect_to master_show_url, notice: "Update Successfully" }
+      else
+        format.html { render master_edit_url }
+      end
+    end
+  end
+
   def delete
     @master = Master.find(params[:id])
     @master.secondaries.destroy_all
