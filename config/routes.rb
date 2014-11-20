@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'master_view/show/:id' => 'master_view#show', as: :master_show
 
   get 'master_view/index'
+ 
 
   get 'masters/:id/secondaries/new' => 'secondaries#master_new', as: :master_secondary_new
   post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
