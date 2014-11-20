@@ -80,6 +80,11 @@ class SecondariesController < ApplicationController
     end
   end
 
+  def secondary_index
+    @master = Master.find(params[:id])
+    @secondaries = @master.secondaries
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_secondary
