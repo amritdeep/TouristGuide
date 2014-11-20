@@ -31,7 +31,7 @@ def secondary_create
     @description = @secondary.descriptions.create(description_params)
     respond_to do |format|
       if @description.save
-        format.html{ redirect_to root_url, notice: "One description data is added in master data" }
+        format.html{ redirect_to master_secondary_index_path(@secondary.master.id), notice: "One description data is added in master data" }
       else
         format.html {render :secondary_new, notice: "Unable to add description data" }
       end
