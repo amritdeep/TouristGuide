@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   ## Master Secondary route
   get 'masters/:id/secondaries/new' => 'secondaries#master_new', as: :master_secondary_new
   post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
-
+  get 'masters/:id/secondaries/index' => 'secondaries#secondary_index', as: :master_secondary_index
 
 ## secondary description route
 get 'secondaries/:id/descriptions/new' => 'descriptions#secondary_new', as: :secondary_description_new
