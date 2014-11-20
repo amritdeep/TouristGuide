@@ -2,12 +2,14 @@
 	<tr>
 		<th>Name</th>
 		<th>Description</th>
+		<th>Master table count</th>
 	</tr>
 
 	<% @master.each do |m| %>
 	<tr>
-		<td><%= link_to m.name, master_secondaries_path(m) %></td>
+		<td><%= link_to m.name, master_secondary_new_path(m) %></td>
 		<td><%= m.description %></td>
+		<td><%= m.secondaries.count %></td>
 	</tr>	
 	<% end %>
 </table>
