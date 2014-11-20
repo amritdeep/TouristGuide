@@ -6,14 +6,15 @@ Rails.application.routes.draw do
 
   resources :secondaries
 
+
+  ## Master route
   get 'master_view/index' => 'master_view#index'
   get 'master_view/new' => 'master_view#new'
   post 'master_view/create' => 'master_view#create', as: :masters
   get 'master_view/show/:id' => 'master_view#show', as: :master_show
+  delete 'master_view/:id' => 'master_view#delete', as: :masters_delete
 
-  get 'master_view/index'
- 
-
+  ## Master Secondary route
   get 'masters/:id/secondaries/new' => 'secondaries#master_new', as: :master_secondary_new
   post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
 

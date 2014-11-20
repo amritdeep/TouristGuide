@@ -21,7 +21,16 @@ class MasterViewController < ApplicationController
   end
 
   def show
-  	@master = Master.find(params[:id])
+  	@master = Master.find(params[:id])  
+  end
+
+  def delete
+    @master = Master.find(params[:id])
+    @master.secondaries.destroy_all
+    @master.destory
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "Master is deleted." }
+    end
   end
 
   private
