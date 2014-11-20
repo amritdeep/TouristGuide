@@ -8,7 +8,7 @@ class MasterViewController < ApplicationController
   end
 
   def create
-  	@master = Master.create(name: params[:master][:name], description: params[:master][:description])
+  	@master = Master.create(master_params)
 
   	respond_to do |format|
   		if @master.save
@@ -23,4 +23,13 @@ class MasterViewController < ApplicationController
   def show
   	@master = Master.find(params[:id])
   end
+
+  private
+
+  def master_params
+    params.require(:master).permit(:name, :description)
+  end
+
+
 end
+  
