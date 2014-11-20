@@ -14,7 +14,9 @@ class SecondariesController < ApplicationController
 
   # GET /secondaries/new
   def new
-    @secondary = Secondary.new
+   
+    @secondary = @master.secondaries.new
+    # @secondary = Secondary.new
   end
 
   # GET /secondaries/1/edit
@@ -58,6 +60,23 @@ class SecondariesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to secondaries_url, notice: 'Secondary was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def master_new
+    @master = Master.find(params[:id])
+    @secondary = @master.secondaries.new
+  end
+
+  def master_create
+    @master = Master.find(params[:id])
+    @secondary = @master.secondaries.create(secondary_params)
+    respond_to do |format|
+      if @secondary.save
+        format.html{ redirect_to root_url, notice: "One secondary data is added in master data" }
+      else
+        format.html {render :master_new, notice: "Unable to added secondary data" }
+      end
     end
   end
 

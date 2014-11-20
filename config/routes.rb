@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   get 'master_view/index'
 
-  get 'masters/:id/secondaries/new' => 'secondaries#master', as: :master_secondaries
+  get 'masters/:id/secondaries/new' => 'secondaries#master_new', as: :master_secondary_new
+  post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
 
 
   # The priority is based upon order of creation: first created -> highest priority.
