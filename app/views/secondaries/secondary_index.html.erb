@@ -1,0 +1,38 @@
+<h1><%= @master.name %> secondary data</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Height</th>
+      <th>Width</th>
+      <th>Depth</th>
+      <th>Distance from</th>
+      <th>Distance end</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secondaries.each do |secondary| %>
+      <tr>
+        <td><%= secondary.name %></td>
+        <td><%= secondary.description %></td>
+        <td><%= secondary.height %></td>
+        <td><%= secondary.width %></td>
+        <td><%= secondary.depth %></td>
+        <td><%= secondary.distance_from %></td>
+        <td><%= secondary.distance_end %></td>
+        <td><%= link_to 'Show', secondary %></td>
+        <td><%= link_to 'Edit', edit_secondary_path(secondary) %></td>
+        <td><%= link_to 'Destroy', secondary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to :back, root_url %> 
+<%= link_to "New Secondary", master_secondary_new_path(@master) %>
