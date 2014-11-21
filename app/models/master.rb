@@ -4,9 +4,5 @@ class Master < ActiveRecord::Base
 	has_many :secondaries
 
 	scope :master_search, -> (query) { where("name like ?", "%#{query}%") }
-
-	# def self.search(query)
-	# 	where("name like ?", "%#{query}%")
-	# end
-
+	
 end
