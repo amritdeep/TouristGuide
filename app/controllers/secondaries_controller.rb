@@ -14,7 +14,6 @@ class SecondariesController < ApplicationController
 
   # GET /secondaries/new
   def new
-   
     @secondary = @master.secondaries.new
     # @secondary = Secondary.new
   end
