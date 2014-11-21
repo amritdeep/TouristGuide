@@ -1,4 +1,5 @@
 <%= render 'searchform' %>
+<% if @master.present? %>
 <table border=1>
 	<tr>
 		<th>Name</th>
@@ -22,5 +23,8 @@
 	</tr>	
 	<% end %>
 </table>
+<% else %>
+	<%= "No Result Found" %></br>
+<% end %>
 
 <%= link_to "Home page", root_url %>

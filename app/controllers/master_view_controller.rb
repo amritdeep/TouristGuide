@@ -48,12 +48,15 @@ class MasterViewController < ApplicationController
     end
   end
 
+  def search
+    @master = Master.master_search(params[:search])
+  end
+
   private
 
   def master_params
     params.require(:master).permit(:name, :description)
   end
-
 
 end
   
