@@ -6,10 +6,15 @@ class DescriptionsController < ApplicationController
   def index
     @descriptions = Description.all
   end
+  def description_index
+    @secondary = Secondary.find(params[:id])
+    @descriptions = @secondary.descriptions
+end
 
   # GET /descriptions/1
   # GET /descriptions/1.json
   def show
+    
   end
 
   # GET /descriptions/new
@@ -79,6 +84,7 @@ def secondary_create
       format.json { head :no_content }
     end
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

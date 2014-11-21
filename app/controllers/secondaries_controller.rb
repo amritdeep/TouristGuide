@@ -4,12 +4,15 @@ class SecondariesController < ApplicationController
   # GET /secondaries
   # GET /secondaries.json
   def index
+    
     @secondaries = Secondary.all
+    #@secondaries = @master.secondaries.all
   end
 
   # GET /secondaries/1
   # GET /secondaries/1.json
   def show
+  
   end
 
   # GET /secondaries/new
@@ -29,7 +32,7 @@ class SecondariesController < ApplicationController
 
     respond_to do |format|
       if @secondary.save
-        format.html { redirect_to secondary_show_url(@secondary), notice: 'Secondary was successfully created.' }
+        format.html { redirect_to @secondary, notice: 'Secondary was successfully created.' }
         format.json { render :show, status: :created, location: @secondary }
       else
         format.html { render :new }
@@ -78,11 +81,10 @@ class SecondariesController < ApplicationController
       end
     end
   end
-
-  def secondary_index
+def secondary_index
     @master = Master.find(params[:id])
     @secondaries = @master.secondaries
-  end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
