@@ -77,7 +77,11 @@ end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def image_params
+    #   params.require(:image).permit(:name)
+    # end
+
     def image_params
-      params.require(:image).permit(:name)
+      params.require(:image).permit(:name, :avatar)
     end
 end
