@@ -19,6 +19,9 @@ config/initializers/secret_token.rb
 /.bundle
 /vendor/bundle
 
+## Doesn't upload image
+/public/uploads/image/*
+
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
 

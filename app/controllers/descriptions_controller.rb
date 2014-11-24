@@ -14,7 +14,6 @@ end
   # GET /descriptions/1
   # GET /descriptions/1.json
   def show
-    
   end
 
   # GET /descriptions/new

@@ -16,7 +16,7 @@
       <tr>
         <td><%= description.description %></td>
         <td><%= description.images.count %></td>
-        <td><%= link_to "Add new", secondary_description_new_path(description)  %></td>
+        <td><%= link_to "Add new", description_image_new_path(description)  %></td>
         <td><%= link_to 'Show', description %></td>
         <td><%= link_to 'Edit', edit_description_path(description) %></td>
         <td><%= link_to 'Destroy', description, method: :delete, data: { confirm: 'Are you sure?' } %></td>

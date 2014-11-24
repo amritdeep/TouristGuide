@@ -19,12 +19,32 @@ class ImagesController < ApplicationController
 
   # GET /images/new
   def new
+    # @description = Description.find(params[:id])
+    # @image =@description.images.new
     @image = Image.new
   end
+
   def description_new
     @description = Description.find(params[:id])
-    @images = @description.images.new
-end
+    @image =@description.images.new
+  end
+
+
+  def description_create
+    @description = Description.find(params[:id])
+    @image =@description.images.new(image_params)
+
+    respond_to do |format|
+      if @image.save
+        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.json { render :show, status: :created, location: @image }
+      else
+        format.html { render :new }
+        format.json { render json: @image.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 
   # GET /images/1/edit
   def edit
