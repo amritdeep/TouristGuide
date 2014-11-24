@@ -23,6 +23,14 @@
     <%= f.hidden_field :avatar_cache %>
   </p>
 
+    <p>
+    <label>Images</label>
+    <%= image_tag(@image.avatar_url) if @image.avatar? %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
+  </p>
+
+
 
   <div class="actions">
     <%= f.submit  'Add'%>
