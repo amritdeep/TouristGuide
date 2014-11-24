@@ -7,6 +7,11 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
 
+  def image_index
+    @description = Description.find(params[:id])
+    @images = @description.images
+  end
+
   # GET /images/1
   # GET /images/1.json
   def show
@@ -16,6 +21,10 @@ class ImagesController < ApplicationController
   def new
     @image = Image.new
   end
+  def description_new
+    @description = Description.find(params[:id])
+    @images = @description.images.new
+end
 
   # GET /images/1/edit
   def edit

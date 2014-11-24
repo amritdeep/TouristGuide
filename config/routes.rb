@@ -20,12 +20,19 @@ Rails.application.routes.draw do
   post 'masters/:id/secondaries/create' => 'secondaries#master_create', as: :master_secondary_create
   get 'masters/:id/secondaries/index' => 'secondaries#secondary_index', as: :master_secondary_index
 
-  ## secondary description route
-  get 'secondaries/:id/descriptions/new' => 'descriptions#secondary_new', as: :secondary_description_new
-  post 'secondaries/:id/descriptions/create'=> 'descriptions#secondary_create', as: :secondary_description_create
- 
+   
   ## Search Route
   post '/search' => 'master_view#search'
+
+## secondary description route
+get 'secondaries/:id/descriptions/new' => 'descriptions#secondary_new', as: :secondary_description_new
+post 'secondaries/:id/descriptions/create'=> 'descriptions#secondary_create', as: :secondary_description_create
+get 'secondaries/:id/descriptions/index' => 'descriptions#description_index', as: :secondary_description_index
+
+##descriptionn image route
+get 'descriptions/:id/images/new' => 'images#description_new', as: :description_image_new
+post 'descriptions/:id/images/create'=> 'images#description_create', as: :discription_image_create
+get 'descriptions/:id/images/index' => 'images#image_index', as: :description_image_index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
