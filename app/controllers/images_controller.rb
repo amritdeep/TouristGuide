@@ -36,13 +36,19 @@ class ImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
+        format.html { redirect_to description_image_show_url, notice: 'Image was successfully created.' }
+        format.json { render :description_show, status: :created, location: @image }
       else
-        format.html { render :new }
+        format.html { render :description_new }
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+ # GET /descriptions/:id/images/:id
+  def description_show
+    @description = Description.find(params[:id])
+    @images = @description.images
   end
 
 

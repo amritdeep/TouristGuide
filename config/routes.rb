@@ -33,7 +33,7 @@ get 'secondaries/:id/descriptions/index' => 'descriptions#description_index', as
 get 'descriptions/:id/images/new' => 'images#description_new', as: :description_image_new
 post 'descriptions/:id/images/create'=> 'images#description_create', as: :discription_image_create
 get 'descriptions/:id/images/index' => 'images#image_index', as: :description_image_index
-
+get 'descriptions/:id/images/show' => 'images#description_show', as: :description_image_show
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
