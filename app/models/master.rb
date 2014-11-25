@@ -10,6 +10,6 @@ class Master < ActiveRecord::Base
 	validates :description, presence: true
 	has_many :secondaries
 
-	scope :master_search, -> (query) { where("name like ?", "%#{query}%") }
-
+	scope :master_name_search, -> (query) { where("name like ?", "%#{query}%" ) }
+	scope :master_des_serach, -> (query) { where("description like ?", "%#{query}%") }
 end

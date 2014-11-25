@@ -55,11 +55,16 @@ class MasterViewController < ApplicationController
     #   @master = Secondary.search(params[:search])
     # end
 
-    @master = Master.master_search(params[:search])
+    @master = Master.master_name_search(params[:search])
     unless @master.present?
-      @master = Secondary.secondary_search(params[:search])
+      @master = Master.master_des_serach(params[:search])
+      unless @master.present?
+        @master = Secondary.secondary_name_search(params[:search])
+        unless @master.present?
+          @master = Secondary.secondary_des_search(params[:search])
+        end
+      end
     end
-
   end
 
   private

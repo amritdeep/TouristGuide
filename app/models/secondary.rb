@@ -9,6 +9,7 @@ class Secondary < ActiveRecord::Base
 	has_many :descriptions
 	belongs_to :master
 
-	scope :secondary_search, -> (query) { where("name like ?", "%#{query}%") }
+	scope :secondary_name_search, -> (query) { where("name like ?", "%#{query}%") }
+	scope :secondary_des_search, -> (query) { where("description like ?", "%#{query}%") }
 
 end
