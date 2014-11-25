@@ -49,7 +49,8 @@ class MasterViewController < ApplicationController
   end
 
   def search
-    @master = Master.master_search(params[:search])
+    # @master = Master.master_search(params[:search])
+    @master = Master.search(params[:search])
   end
 
   private

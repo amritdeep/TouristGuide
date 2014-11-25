@@ -15,7 +15,7 @@
 	<tr>
 		<td><%= m.name %></td>
 		<td><%= m.description %></td>
-		<td><%= m.secondaries.count %></td>
+		<!-- <td><%#= m.secondaries.count %></td> -->
 		<td><%= link_to "Delete", masters_delete_path(m), method: :delete, data: { confirm: 'Do you want to delete it ?' } %></td>
 		<td><%= link_to "Edit", master_edit_path(m) %></td>
 		<td><%= link_to "Add", master_secondary_new_path(m) %></td>

@@ -28,7 +28,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+## For Search Engine
 gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,10 +47,11 @@ gem 'execjs'
 
 gem 'therubyracer'
 
-## Gem for Image Upload
+## For Image Upload
 gem 'carrierwave'
 gem 'rmagick'
 
-## Gem for CSS Framework
+## For CSS Framework
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
