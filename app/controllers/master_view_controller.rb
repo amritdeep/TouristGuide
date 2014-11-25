@@ -49,11 +49,17 @@ class MasterViewController < ApplicationController
   end
 
   def search
-    # @master = Master.master_search(params[:search])
-    @master = Master.search(params[:search])
+    ## For ElasticSearch
+    # @master = Master.search(params[:search])
+    # unless @master.present?
+    #   @master = Secondary.search(params[:search])
+    # end
+
+    @master = Master.master_search(params[:search])
     unless @master.present?
-      @master = Secondary.search(params[:search])
+      @master = Secondary.secondary_search(params[:search])
     end
+
   end
 
   private
