@@ -45,5 +45,10 @@ gem 'execjs'
 
 gem 'therubyracer'
 
+## Gem for Image Upload
 gem 'carrierwave'
 gem 'rmagick'
+
+## Gem for CSS Framework
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
