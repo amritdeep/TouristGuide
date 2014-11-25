@@ -8,7 +8,29 @@
 </head>
 <body>
 
-<%= yield %>
+	<div id="main-container" class="container">
+      <div class="row">
+        <div id="sidebar" class="col-xs-3">
+          <!-- sidebar content -->
+
+          <ul>
+          	<li><%= link_to 'Home', "#", class: 'btn btn-success' %></li>
+          	<li><%= link_to 'Master', "#", class: 'btn btn-success' %></li>
+          	<li><%= link_to 'Secondaries', "#", class: 'btn btn-success' %></li>
+          	<li><%= link_to 'Images', "#", class: 'btn btn-success' %></li>
+
+          </ul>
+
+
+        </div>
+        <div id="content" class="col-xs-9">
+          <!--  main content -->
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+<%#= yield %>
 
 </body>
 </html>
