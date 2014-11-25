@@ -1,7 +1,7 @@
-
+<div class="panel panel-default">
 <h1><%= @master.name %> secondary data</h1>
-
-<table border="1">
+  <!-- Table -->
+  <table class="table" border="1">
   <thead>
     <tr>
       <th>Name</th>
@@ -39,7 +39,7 @@
   </tbody>
 </table>
 
-<br>
+</div>
 
 <%= link_to :back, root_url %> 
 <%= link_to "New Secondary", master_secondary_new_path(@master) %>

@@ -1,6 +1,14 @@
 <%=  render 'searchform' %>
-<table border=1>
-	<tr>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+<!--   <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div> -->
+
+  <!-- Table -->
+  <table border="1", class="table">
+  		<tr>
 		<th>Name</th>
 		<th>Description</th>
 		<th>Master table count</th>
@@ -21,6 +29,7 @@
 		<td><%= link_to "View", master_secondary_index_path(m), class: 'btn btn-primary btn-xs'  %></td>
 	</tr>	
 	<% end %>
-</table>
+  </table>
+</div>
 
 <%= link_to "Create New Master", master_view_new_path, class: 'btn btn-success' %>
