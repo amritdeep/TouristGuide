@@ -1,9 +1,6 @@
 <% if @master.present? %>
 	<% @master.each do |master| %>
-		<ul>
-			<li><%= link_to master.name,  %></li>
-			<li><%= master.description %></li>
-		</ul>
+			<li><%= link_to master.name, master_show_path(master) %></li>
 	<% end %> 
 <% else %>
 	<%= "No Result Found"%>
