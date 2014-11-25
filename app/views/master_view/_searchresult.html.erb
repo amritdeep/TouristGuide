@@ -1,0 +1,10 @@
+<% if @master.present? %>
+	<% @master.each do |master| %>
+		<ul>
+			<li><%= link_to master.name,  %></li>
+			<li><%= master.description %></li>
+		</ul>
+	<% end %> 
+<% else %>
+	<%= "No Result Found"%>
+<% end %>
